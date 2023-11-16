@@ -1,21 +1,12 @@
 # Issue with Next Cache
 
 ## Getting Started
-
-First, run the development server:
-
+Run the development server:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn install && yarn dev
 ```
 
 ## The Issue
-
 1. Go to `http://localhost:3000/chat`
 2. Type in `Message #4`
    1. After clicking submit, the page will redirect to the specific message url (ie., `http://localhost:3000/chat/eR4pMgx1iPVuXsKDoYju`)
