@@ -1,5 +1,4 @@
 "use client";
-import { Chat } from "@/lib/data";
 import { nanoid } from "nanoid";
 import { useRouter } from "next/navigation";
 import React from "react";

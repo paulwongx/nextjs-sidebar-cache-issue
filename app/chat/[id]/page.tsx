@@ -1,5 +1,5 @@
 import { getChat, getChats } from "@/actions";
-import { Chat } from "@/lib/data";
+import { Chat } from "@/lib/types";
 import React from "react";
 import { Input } from "../_input";
 
@@ -12,14 +12,14 @@ export default async function Page({
 		id: string;
 	};
 }) {
-	console.log("[id].page", params.id);
-	const chat = (await getChat(params.id)) as Chat;
+	const chat = await getChat(params.id);
+  if (!chat) return;
 
 	return (
 		<div className="flex flex-col h-full w-48 px-6 self-start">
 			<h2>Main Chat Showing Area</h2>
-			<p>Id: {chat.id}</p>
-			<p>Message: {chat.message}</p>
+			<p>Id: {chat?.id}</p>
+			<p>Message: {chat?.message}</p>
 			<Input />
 		</div>
 	);
